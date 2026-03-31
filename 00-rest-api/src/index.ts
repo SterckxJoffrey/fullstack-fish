@@ -5,7 +5,7 @@ import fishspotsRoutes from './resources/fishspots/fishspots.routes';
 
 const app = new Hono()
 
-app.use('*', cors())
+app.use('https://fullstack-fish-api.onrender.com', cors())
 
 app.get('/', (c) => {
   return c.text('Hello Hono!')
