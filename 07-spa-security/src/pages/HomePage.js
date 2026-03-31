@@ -1,10 +1,14 @@
 import { SpotList } from '../components/SpotList.js';
-import { getMockSpots } from '../services/fishspots.js';
+import { getSpots } from '../services/fishspots.js';
 import { Button } from '../components/Button.js';
+
 
 export async function HomePage() {
   try {
-    const spots = await getMockSpots();
+    const spots = await getSpots();
+
+      
+console.log(spots)
 
     return `
       <div class="animate-[fadeIn_0.3s_ease]">

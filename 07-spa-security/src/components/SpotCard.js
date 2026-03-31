@@ -33,7 +33,7 @@ export function SpotCard(props) {
           <span class="flex">
             <svg-icon src="icons/lucide-Fish-Outlined.svg" width="16" height="16" />
           </span>
-          <span>${fishs.join(', ')}</span>
+          <span>${fishs}</span>
         </div>
       </div>
     </article>

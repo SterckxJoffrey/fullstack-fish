@@ -1,8 +1,8 @@
-export function getMockSpots() {
-  return fetch('/api/fishspots')
+export function getSpots() {
+  return fetch('http://localhost:3000/fishspots')
     .then(response => response.json())
     .then(data => {
-      return data.data;
+      return data;
     })
     .catch(error => {
       console.error('Error fetching fishspots:', error);

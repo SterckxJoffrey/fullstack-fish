@@ -14,9 +14,10 @@ export default defineConfig({
   },
   assetsInclude: ['**/*.svg'],
   server: {
-    port: 3000,
+    port: 3080,
     open: true,
     historyApiFallback: true,
+    
   },
   plugins: [
     tailwindcss(),
