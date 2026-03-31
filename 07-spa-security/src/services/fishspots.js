@@ -1,5 +1,5 @@
 export function getSpots() {
-  return fetch('http://localhost:3000/fishspots')
+  return fetch('https://fullstack-fish.onrender.com/')
     .then(response => response.json())
     .then(data => {
       return data;
