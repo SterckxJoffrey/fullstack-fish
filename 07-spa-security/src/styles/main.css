@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-500: #259DF4;
+  --color-neutral-900: #171A1F;
+  --color-neutral-600: #565D6D;
+  --color-neutral-400: #9CA3AF;
+  --color-neutral-200: #F3F4F6;
+  --color-neutral-300: #E5E7EB;
+  --color-red: #DD3C57;
+  --font-family-heading: 'Poppins', sans-serif;
+  --font-family-body: 'Open Sans', serif;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* svg-icon custom element (not scopeable to utilities) */
+svg-icon { display: flex; width: var(--width, 24px); height: var(--height, 24px); }
+svg-icon svg { width: 100%; height: 100%; fill: var(--color, currentColor); transition: fill 0.3s ease; }
+svg-icon:hover svg { fill: var(--hover-color, var(--color, currentColor)); }
+
+/* Global heading typography */
+h1, h2, h3, h4, h5, h6 { font-family: var(--font-family-heading); }
+h1 { font-size: 2.5rem; line-height: 1.2; font-weight: 700; }
+h2 { font-size: 1.5rem; line-height: 1.2; font-weight: 600; }
+h3 { font-size: 1.25rem; line-height: 1.2; font-weight: 600; }

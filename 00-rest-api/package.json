@@ -1,0 +1,26 @@
+{
+  "name": "00-rest-api",
+  "scripts": {
+    "lint": "biome lint ./src",
+    "format": "biome format ./src --write",
+    "check": "biome check --write ./src",
+    "dev": "bun --watch src/index.ts",
+    "db:push": "drizzle-kit push --config=drizzle.config.ts",
+    "start": "bun run db:push && bun src/index.ts",
+    "test": "bun test",
+    "test:watch": "bun test --watch",
+    "test:coverage": "bun test --coverage"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.6",
+    "drizzle-kit": "^0.31.10",
+    "drizzle-orm": "^0.45.1",
+    "drizzle-zod": "^0.8.3",
+    "hono": "^4.12.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.8",
+    "@libsql/client": "^0.17.2",
+    "@types/bun": "latest"
+  }
+}
