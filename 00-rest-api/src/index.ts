@@ -5,7 +5,11 @@ import fishspotsRoutes from './resources/fishspots/fishspots.routes';
 
 const app = new Hono()
 
-app.use('https://fishspots-hq67.onrender.com', cors())
+app.use('*', cors(
+  {
+    origin : 'https://fishspots-hq67.onrender.com'
+  }
+))
 
 app.get('/', (c) => {
   return c.text('Hello Hono!')
