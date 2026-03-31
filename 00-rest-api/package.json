@@ -1,7 +1,7 @@
 {
   "name": "00-rest-api",
   "scripts": {
-    "build": "bun build src/index.ts --outdir dist --target bun",
+    "build": "bun install && bun build src/index.ts --outdir dist --target bun",
     "lint": "biome lint ./src",
     "format": "biome format ./src --write",
     "check": "biome check --write ./src",
